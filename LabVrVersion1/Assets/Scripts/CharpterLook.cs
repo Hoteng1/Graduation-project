@@ -1,22 +1,24 @@
-﻿using System.Collections;
+﻿using Assets.Scripts;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharpterLook : MonoBehaviour {
+public class CharpterLook : MonoBehaviour
+{
 
     public Transform playerBody;
     public float mouseSensitivity;
-
     float xAxisClamp = 0.0f;
 
     void Awake()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+       Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()
     {
         RotateCamera();
+
     }
 
     void RotateCamera()
@@ -47,7 +49,7 @@ public class CharpterLook : MonoBehaviour {
             targetRotCam.x = 270;
         }
 
-        print(mouseY);
+
 
 
         transform.rotation = Quaternion.Euler(targetRotCam);
