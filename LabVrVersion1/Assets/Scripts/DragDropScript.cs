@@ -3,7 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DragDropScript : MonoBehaviour {
+public class DragDropScript : MonoBehaviour
+{
 
     //Initialize Variables
     GameObject getTarget;
@@ -11,6 +12,7 @@ public class DragDropScript : MonoBehaviour {
     Vector3 offsetValue;
     Vector3 positionOfScreen;
     StoveLogical stoveLogical;
+    
     // Use this for initialization
     void Start()
     {
@@ -24,6 +26,7 @@ public class DragDropScript : MonoBehaviour {
         if (Input.GetMouseButtonDown(0))
         {
             getTarget = ReturnClickedObject();
+            stoveLogical.SetTartget(getTarget);
             if (getTarget != null && isReferenceTrue(getTarget))
             {
                 isMouseDragging = true;
@@ -31,17 +34,21 @@ public class DragDropScript : MonoBehaviour {
                 positionOfScreen = Camera.allCameras[0].WorldToScreenPoint(getTarget.transform.position);
                 offsetValue = getTarget.transform.position - Camera.allCameras[0].ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, positionOfScreen.z));
             }
+           
         }
 
         //Mouse Button Up
         if (Input.GetMouseButtonUp(0))
         {
             isMouseDragging = false;
-            Debug.Log(stoveLogical.isIncludeObject(getTarget));
+            if (stoveLogical.isIncludeObject(getTarget))
+            {
+                stoveLogical.LockUnlockDoor();
+            }
         }
 
         //Is mouse Moving
-        if (isMouseDragging)
+        if (isMouseDragging )
         {
             //tracking mouse position.
             Vector3 currentScreenSpace = new Vector3(Input.mousePosition.x, Input.mousePosition.y, positionOfScreen.z);
@@ -50,7 +57,8 @@ public class DragDropScript : MonoBehaviour {
             Vector3 currentPosition = Camera.allCameras[0].ScreenToWorldPoint(currentScreenSpace) + offsetValue;
 
             //It will update target gameobject's current postion.
-            getTarget.transform.position = currentPosition;
+            getTarget.transform.position =Vector3.MoveTowards(getTarget.transform.position, currentPosition, 0.9f);
+            //getTarget.transform.position = currentPosition;
         }
 
 
@@ -59,7 +67,7 @@ public class DragDropScript : MonoBehaviour {
     //Method to Return Clicked Object
     GameObject ReturnClickedObject()
     {
-        
+
         GameObject target = null;
         RaycastHit raycastHit;
         Ray ray = Camera.allCameras[0].ScreenPointToRay(Input.mousePosition);
@@ -72,12 +80,15 @@ public class DragDropScript : MonoBehaviour {
 
     bool isReferenceTrue(GameObject gameObject)
     {
-        string[] LockObjects ={ "FirstObject", "Terrain" };
-        for(int i=0;i<LockObjects.Length;i++)
+       
+            
+
+        string[] LockObjects = { "FirstObject", "Terrain","ButtonStove", "StoveBox" };
+        for (int i = 0; i < LockObjects.Length; i++)
         {
             if (gameObject.Equals(GameObject.Find(LockObjects[i])))
             {
-                return false; 
+                return false;
             }
         }
 

@@ -9,7 +9,11 @@ public class CharpterLook : MonoBehaviour
     public Transform playerBody;
     public float mouseSensitivity;
     float xAxisClamp = 0.0f;
-
+    private StoveLogical stove;
+    private void Start()
+    {
+        stove = StoveLogical.getInstance();
+    }
     void Awake()
     {
        Cursor.lockState = CursorLockMode.Locked;
@@ -56,5 +60,10 @@ public class CharpterLook : MonoBehaviour
         playerBody.rotation = Quaternion.Euler(targetRotBody);
 
 
+    }
+
+    private void OnGUI()
+    {
+        GUI.Box(new Rect(0, 0, 400, 400), "Information"+ stove.GetInformation());
     }
 }
