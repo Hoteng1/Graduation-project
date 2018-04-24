@@ -43,7 +43,7 @@ public class DragDropScript : MonoBehaviour
             isMouseDragging = false;
             if (stoveLogical.isIncludeObject(getTarget))
             {
-                stoveLogical.LockUnlockDoor();
+               
             }
         }
 
@@ -57,7 +57,7 @@ public class DragDropScript : MonoBehaviour
             Vector3 currentPosition = Camera.allCameras[0].ScreenToWorldPoint(currentScreenSpace) + offsetValue;
 
             //It will update target gameobject's current postion.
-            getTarget.transform.position =Vector3.MoveTowards(getTarget.transform.position, currentPosition, 0.9f);
+            getTarget.transform.position =Vector3.MoveTowards(getTarget.transform.position, currentPosition, 0.7f);
             //getTarget.transform.position = currentPosition;
         }
 

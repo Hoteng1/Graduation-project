@@ -21,5 +21,11 @@ namespace Assets.Scripts
             }
 
         }
+
+        static public void Jump(GameObject gameObject)
+        {
+            
+            gameObject.transform.Translate(Vector3.up * 260 * Time.deltaTime, Space.World);
+        }
     }
 }

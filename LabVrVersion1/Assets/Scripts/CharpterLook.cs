@@ -10,8 +10,13 @@ public class CharpterLook : MonoBehaviour
     public float mouseSensitivity;
     float xAxisClamp = 0.0f;
     private StoveLogical stove;
+
+    private TextMesh Text;
+  
     private void Start()
     {
+        Text = GameObject.Find("Data").GetComponent<TextMesh>();
+       
         stove = StoveLogical.getInstance();
     }
     void Awake()
@@ -64,6 +69,7 @@ public class CharpterLook : MonoBehaviour
 
     private void OnGUI()
     {
-        GUI.Box(new Rect(0, 0, 400, 400), "Information"+ stove.GetInformation());
+        Text.text = stove.GetInformation();
+        //GUI.Box(new Rect(0, 0, 400, 400), "Information"+ stove.GetInformation());
     }
 }

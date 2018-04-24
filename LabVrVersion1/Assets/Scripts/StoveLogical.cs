@@ -30,55 +30,56 @@ namespace Assets.Scripts
         private bool isLockDoor;
         private Transform Arrow;
         private float AngleArrow;
-        private  System.Timers.Timer aTimer;
+        private System.Timers.Timer aTimer;
         private float ChangeAngle;
         IEnumerable<TableForGradirovanie> list;
         int currentIndex;
-        bool isRunTimer;
-        SpriteRenderer  display;
+        int tempure;
+        SpriteRenderer display;
         //Consturctor
         private StoveLogical() { }
-
+        private SpriteRenderer FirstNumber;
+        private SpriteRenderer SecondNumber;
+        private Sprite[] Number; 
         //Methods
 
         public void Init(GameObject Stove, GameObject VMetr)
         {
+
+           
             
-            isRunTimer = false;
-            inforamaion = new StringBuilder();
             isLockDoor = false;
             this.Stove = Stove;
             this.VMetr = VMetr;
             this.Arrow = VMetr.transform.GetChild(4);
-            this.AngleArrow = Arrow.transform.position.z;
-            ChangeAngle = AngleArrow;
+            this.AngleArrow = 0;
+            ChangeAngle = Arrow.transform.localRotation.z;
             this.Door = Stove.transform.GetChild(8);
-            initAngleStoveDoor = Door.transform.rotation.z;
+            initAngleStoveDoor = Door.transform.localRotation.z;
             AreaOfStove = new Dictionary<char, float[]>();
             InitializerArea();
+            tempure = 0;
+            
+         
+
         }
 
-        public void ShowDisplay()
+        public void ShowDisplay(TextMesh text)
         {
-            if (isRunTimer)
-            {
-                
-            }
+            text.text = "T: " + tempure.ToString();
         }
 
         public void RotateArrow()
         {
-            if(isRunTimer)
-            {
-                
-                isRunTimer = false;
-                Arrow.transform.Rotate(0, 0, (ChangeAngle - AngleArrow)/10);
-                AngleArrow += (ChangeAngle - AngleArrow) / 10;
-            }
-            
+            Arrow.transform.Rotate(0, 0, AngleArrow);
+            Arrow.transform.Rotate(0, 0, ChangeAngle);
+            AngleArrow = -ChangeAngle;
+
+
         }
         public string GetInformation()
         {
+
             return inforamaion.ToString();
         }
         public static StoveLogical getInstance()
@@ -97,9 +98,11 @@ namespace Assets.Scripts
                 {
 
                     angle = -1;
+
                 }
 
                 Door.transform.Rotate(new Vector3(0, 0, angle));
+
             }
 
         }
@@ -107,12 +110,14 @@ namespace Assets.Scripts
         {
             if (isLockDoor)
             {
-                Door.transform.Rotate(new Vector3(0, 0, Door.rotation.z - initAngleStoveDoor));
-                isLockDoor = true;
+
+                isLockDoor = false;
             }
             else
             {
-                isLockDoor = false;
+
+                isLockDoor = true;
+                Door.transform.localRotation = new Quaternion(Door.transform.localRotation.x, Door.transform.localRotation.y, initAngleStoveDoor, Door.transform.localRotation.w);
             }
         }
 
@@ -123,9 +128,11 @@ namespace Assets.Scripts
             {
 
                 angle = 1;
+
             }
 
             Door.transform.Rotate(new Vector3(0, 0, angle));
+
         }
 
         public bool isIncludeObject(GameObject gameObject)
@@ -134,9 +141,7 @@ namespace Assets.Scripts
             foreach (var item in AreaOfStove)
             {
 
-                Debug.Log(item.Value[0]);
-                Debug.Log(item.Value[1]);
-                Debug.Log(gameObject.transform.position[i]);
+
 
                 if (gameObject.transform.position[i] < item.Value[0] || gameObject.transform.position[i] > item.Value[1])
                 {
@@ -177,7 +182,7 @@ namespace Assets.Scripts
 
             return table;
         }
-        
+
         public void SetTartget(GameObject target)
         {
             this.targetMetal = target;
@@ -191,44 +196,48 @@ namespace Assets.Scripts
             aTimer.Elapsed += OnTimedEvent;
             aTimer.AutoReset = true;
             aTimer.Enabled = true;
-            
-          
+
+
         }
 
-        private  void OnTimedEvent(System.Object source, ElapsedEventArgs e)
+        private void OnTimedEvent(System.Object source, ElapsedEventArgs e)
         {
-            isRunTimer = true;
+
             // создаем таймер
-            if (currentIndex==list.Count()-1)
+            if (currentIndex == list.Count() - 1)
             {
                 aTimer.Stop();
+                LockUnlockDoor();
+                tempure = 0;
             }
-                inforamaion.Append(Environment.NewLine);
-                inforamaion.Append(list.ElementAt(currentIndex).ToString());
+            inforamaion.Append(Environment.NewLine);
+            inforamaion.Append(list.ElementAt(currentIndex).ToString());
             change((float)list.ElementAt(currentIndex).EZ);
+            tempure += 10;
             currentIndex++;
-            
+
 
         }
 
         private void change(float param)
         {
-            ChangeAngle= AngleArrow + param;
+            ChangeAngle = param * (float)Math.Sqrt(2) / 10;
+
         }
 
         private TableForGradirovanie Experince(double alpha, double t1, double t2)
         {
-            
+
 
             double EZ = alpha * (t2 - t1);
-            TableForGradirovanie result = new TableForGradirovanie { Name= targetMetal.name, T1 = t1, T2 = t2, Alpha = alpha, EZ = EZ };
-            
+            TableForGradirovanie result = new TableForGradirovanie { Name = targetMetal.name, T1 = t1, T2 = t2, Alpha = alpha, EZ = Math.Abs(EZ) };
+
             return result;
         }
 
         public void BeginExpereince()
         {
-            
+
             switch (targetMetal.name)
             {
                 case "Platinum": alpha = Platinum; break;
@@ -238,11 +247,13 @@ namespace Assets.Scripts
                 case "Copper": alpha = Copper; break;
                 case "Antimony": alpha = Antimony; break;
             }
+            inforamaion = new StringBuilder();
             currentIndex = 0;
             list = GetResult();
             SetTimer();
-            
-            
+            LockUnlockDoor();
+           
+
         }
     }
 }

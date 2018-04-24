@@ -10,6 +10,7 @@ public class ModelGradirTermo : MonoBehaviour
     private GameObject Stove;
     private GameObject VMetr;
     SpriteRenderer m_SpriteRenderer;
+    private TextMesh Display;
     // Use this for initialization
     void Start()
     {
@@ -18,8 +19,9 @@ public class ModelGradirTermo : MonoBehaviour
         VMetr = GameObject.Find("Vmetr");
         stoveLogical = StoveLogical.getInstance();
         stoveLogical.Init(Stove, VMetr);
-        m_SpriteRenderer.sprite = m_SpriteRenderer.GetComponents<Sprite>()[1];
-;
+        Display = GameObject.Find("DisplayData").GetComponent<TextMesh>();
+        //m_SpriteRenderer.sprite = m_SpriteRenderer.GetComponents<Sprite>()[1];
+
     }
 
     // Update is called once per frame
@@ -38,6 +40,7 @@ public class ModelGradirTermo : MonoBehaviour
 
 
         stoveLogical.RotateArrow();
+        stoveLogical.ShowDisplay(Display);
 
 
     }

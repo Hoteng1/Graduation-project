@@ -38,6 +38,10 @@ public class Charpter : MonoBehaviour
         {
             CtrCharpter(10);
         }
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            StaticMethods.Jump(this.gameObject);
+        }
     }
 
     void MovePlayer()
