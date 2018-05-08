@@ -9,17 +9,18 @@ public class ModelGradirTermo : MonoBehaviour
     private StoveLogical stoveLogical;
     private GameObject Stove;
     private GameObject VMetr;
-    SpriteRenderer m_SpriteRenderer;
     private TextMesh Display;
+    private TextMesh Text;
     // Use this for initialization
     void Start()
     {
-        m_SpriteRenderer = this.GetComponent<SpriteRenderer>();
+       
         Stove = GameObject.Find("Stove");
         VMetr = GameObject.Find("Vmetr");
         stoveLogical = StoveLogical.getInstance();
         stoveLogical.Init(Stove, VMetr);
         Display = GameObject.Find("DisplayData").GetComponent<TextMesh>();
+        Text = GameObject.Find("Data").GetComponent<TextMesh>();
         //m_SpriteRenderer.sprite = m_SpriteRenderer.GetComponents<Sprite>()[1];
 
     }
@@ -27,20 +28,26 @@ public class ModelGradirTermo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.E))
+        if(StaticMethods.currentExp == Exp.Termo)
         {
-            
-            stoveLogical.OpenDoor();
+            if (Input.GetKey(KeyCode.E))
+            {
+
+                stoveLogical.OpenDoor();
+            }
+            if (Input.GetKey(KeyCode.Q))
+            {
+
+                stoveLogical.CloseDoor();
+            }
+            stoveLogical.RotateArrow();
+            stoveLogical.ShowDisplay(Display);
+            Text.text = stoveLogical.GetInformation();
         }
-        if (Input.GetKey(KeyCode.Q))
-        {
-            
-            stoveLogical.CloseDoor();
-        }
+       
 
 
-        stoveLogical.RotateArrow();
-        stoveLogical.ShowDisplay(Display);
+        
 
 
     }

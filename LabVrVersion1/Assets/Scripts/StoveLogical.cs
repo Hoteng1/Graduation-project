@@ -35,12 +35,10 @@ namespace Assets.Scripts
         IEnumerable<TableForGradirovanie> list;
         int currentIndex;
         int tempure;
-        SpriteRenderer display;
+    
         //Consturctor
         private StoveLogical() { }
-        private SpriteRenderer FirstNumber;
-        private SpriteRenderer SecondNumber;
-        private Sprite[] Number; 
+  
         //Methods
 
         public void Init(GameObject Stove, GameObject VMetr)

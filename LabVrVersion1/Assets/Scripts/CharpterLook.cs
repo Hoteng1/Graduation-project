@@ -11,11 +11,10 @@ public class CharpterLook : MonoBehaviour
     float xAxisClamp = 0.0f;
     private StoveLogical stove;
 
-    private TextMesh Text;
-  
+     
     private void Start()
     {
-        Text = GameObject.Find("Data").GetComponent<TextMesh>();
+  
        
         stove = StoveLogical.getInstance();
     }
@@ -67,9 +66,5 @@ public class CharpterLook : MonoBehaviour
 
     }
 
-    private void OnGUI()
-    {
-        Text.text = stove.GetInformation();
-        //GUI.Box(new Rect(0, 0, 400, 400), "Information"+ stove.GetInformation());
-    }
+    
 }

@@ -83,7 +83,7 @@ public class DragDropScript : MonoBehaviour
        
             
 
-        string[] LockObjects = { "FirstObject", "Terrain","ButtonStove", "StoveBox" };
+        string[] LockObjects = { "FirstObject", "Terrain","ButtonStove", "StoveBox" , "wall", "walltwo","wallTree", "wallFour" , "Floor"};
         for (int i = 0; i < LockObjects.Length; i++)
         {
             if (gameObject.Equals(GameObject.Find(LockObjects[i])))

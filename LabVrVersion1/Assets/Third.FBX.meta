@@ -1,0 +1,355 @@
+fileFormatVersion: 2
+guid: 123158ea44724f841a95b361469ae1cc
+timeCreated: 1524699289
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Box018
+    100002: Box019
+    100004: Box020
+    100006: Box021
+    100008: Box022
+    100010: Box023
+    100012: Box024
+    100014: Box025
+    100016: Box026
+    100018: buttonVMA
+    100020: buttonVMA0
+    100022: buttonVMA1
+    100024: buttonVMA2
+    100026: buttonVMA3
+    100028: buttonVMA4
+    100030: buttonVMA5
+    100032: buttonVMA6
+    100034: buttonVMA7
+    100036: buttonVMA8
+    100038: Cylinder00
+    100040: Cylinder21
+    100042: Cylinder22
+    100044: Cylinder28
+    100046: Line004
+    100048: Line005
+    100050: //RootNode
+    100052: Tube002
+    100054: Tube003
+    100056: Tube004
+    100058: Tube005
+    100060: Tube006
+    100062: Vmetr
+    100064: "\u041A\u043E\u0440\u043E\u0431\u043A\u0430"
+    100066: "\u041F\u043B\u043E\u0449\u0430\u0434\u043A\u0430"
+    100068: "\u041F\u043B\u043E\u0449\u0430\u0434\u043A\u0430 \u0441 \u0434\u044B\u0440\u043A\u0430\u043C\u0438"
+    100070: "\u041F\u043E\u0434\u0441\u0442\u0430\u0432\u043A\u0430 \u043F\u043E\u0434
+      \u0442\u0440\u0443\u0431\u043A\u0443"
+    100072: "\u041F\u043E\u0434\u0441\u0442\u0430\u0432\u043A\u0430 \u043F\u043E\u0434
+      \u0442\u0440\u0443\u0431\u043A\u04432"
+    100074: "\u0421\u043A\u043E\u0442\u0447"
+    100076: "\u0421\u043A\u043E\u0442\u04472"
+    100078: "\u0421\u043A\u043E\u0442\u04473"
+    100080: "\u0421\u043A\u043E\u0442\u04474"
+    100082: "\u0421\u043A\u043E\u0442\u04475"
+    100084: "\u0422\u0440\u0443\u0431\u043A\u0430"
+    100086: "\u0428\u0430\u0439\u0431\u0430"
+    100088: "\u0428\u0430\u0439\u0431\u0430001"
+    100090: "\u0428\u0430\u0439\u0431\u0430002"
+    100092: "\u0428\u0430\u0439\u0431\u0430003"
+    100094: "\u0428\u0430\u0439\u0431\u0430004"
+    100096: "\u0428\u0430\u0439\u0431\u0430005"
+    100098: "\u0428\u0430\u0439\u0431\u0430006"
+    100100: "\u0428\u0430\u0439\u0431\u0430007"
+    400000: Box018
+    400002: Box019
+    400004: Box020
+    400006: Box021
+    400008: Box022
+    400010: Box023
+    400012: Box024
+    400014: Box025
+    400016: Box026
+    400018: buttonVMA
+    400020: buttonVMA0
+    400022: buttonVMA1
+    400024: buttonVMA2
+    400026: buttonVMA3
+    400028: buttonVMA4
+    400030: buttonVMA5
+    400032: buttonVMA6
+    400034: buttonVMA7
+    400036: buttonVMA8
+    400038: Cylinder00
+    400040: Cylinder21
+    400042: Cylinder22
+    400044: Cylinder28
+    400046: Line004
+    400048: Line005
+    400050: //RootNode
+    400052: Tube002
+    400054: Tube003
+    400056: Tube004
+    400058: Tube005
+    400060: Tube006
+    400062: Vmetr
+    400064: "\u041A\u043E\u0440\u043E\u0431\u043A\u0430"
+    400066: "\u041F\u043B\u043E\u0449\u0430\u0434\u043A\u0430"
+    400068: "\u041F\u043B\u043E\u0449\u0430\u0434\u043A\u0430 \u0441 \u0434\u044B\u0440\u043A\u0430\u043C\u0438"
+    400070: "\u041F\u043E\u0434\u0441\u0442\u0430\u0432\u043A\u0430 \u043F\u043E\u0434
+      \u0442\u0440\u0443\u0431\u043A\u0443"
+    400072: "\u041F\u043E\u0434\u0441\u0442\u0430\u0432\u043A\u0430 \u043F\u043E\u0434
+      \u0442\u0440\u0443\u0431\u043A\u04432"
+    400074: "\u0421\u043A\u043E\u0442\u0447"
+    400076: "\u0421\u043A\u043E\u0442\u04472"
+    400078: "\u0421\u043A\u043E\u0442\u04473"
+    400080: "\u0421\u043A\u043E\u0442\u04474"
+    400082: "\u0421\u043A\u043E\u0442\u04475"
+    400084: "\u0422\u0440\u0443\u0431\u043A\u0430"
+    400086: "\u0428\u0430\u0439\u0431\u0430"
+    400088: "\u0428\u0430\u0439\u0431\u0430001"
+    400090: "\u0428\u0430\u0439\u0431\u0430002"
+    400092: "\u0428\u0430\u0439\u0431\u0430003"
+    400094: "\u0428\u0430\u0439\u0431\u0430004"
+    400096: "\u0428\u0430\u0439\u0431\u0430005"
+    400098: "\u0428\u0430\u0439\u0431\u0430006"
+    400100: "\u0428\u0430\u0439\u0431\u0430007"
+    2300000: Box018
+    2300002: Box019
+    2300004: Box020
+    2300006: Box021
+    2300008: Box022
+    2300010: Box023
+    2300012: Box024
+    2300014: Box025
+    2300016: Box026
+    2300018: buttonVMA
+    2300020: buttonVMA0
+    2300022: buttonVMA1
+    2300024: buttonVMA2
+    2300026: buttonVMA3
+    2300028: buttonVMA4
+    2300030: buttonVMA5
+    2300032: buttonVMA6
+    2300034: buttonVMA7
+    2300036: buttonVMA8
+    2300038: Cylinder00
+    2300040: Cylinder21
+    2300042: Cylinder22
+    2300044: Cylinder28
+    2300046: Line004
+    2300048: Line005
+    2300050: Tube002
+    2300052: Tube003
+    2300054: Tube004
+    2300056: Tube005
+    2300058: Tube006
+    2300060: "\u041A\u043E\u0440\u043E\u0431\u043A\u0430"
+    2300062: "\u041F\u043B\u043E\u0449\u0430\u0434\u043A\u0430"
+    2300064: "\u041F\u043B\u043E\u0449\u0430\u0434\u043A\u0430 \u0441 \u0434\u044B\u0440\u043A\u0430\u043C\u0438"
+    2300066: "\u041F\u043E\u0434\u0441\u0442\u0430\u0432\u043A\u0430 \u043F\u043E\u0434
+      \u0442\u0440\u0443\u0431\u043A\u0443"
+    2300068: "\u041F\u043E\u0434\u0441\u0442\u0430\u0432\u043A\u0430 \u043F\u043E\u0434
+      \u0442\u0440\u0443\u0431\u043A\u04432"
+    2300070: "\u0421\u043A\u043E\u0442\u0447"
+    2300072: "\u0421\u043A\u043E\u0442\u04472"
+    2300074: "\u0421\u043A\u043E\u0442\u04473"
+    2300076: "\u0421\u043A\u043E\u0442\u04474"
+    2300078: "\u0421\u043A\u043E\u0442\u04475"
+    2300080: "\u0422\u0440\u0443\u0431\u043A\u0430"
+    2300082: "\u0428\u0430\u0439\u0431\u0430"
+    2300084: "\u0428\u0430\u0439\u0431\u0430001"
+    2300086: "\u0428\u0430\u0439\u0431\u0430002"
+    2300088: "\u0428\u0430\u0439\u0431\u0430003"
+    2300090: "\u0428\u0430\u0439\u0431\u0430004"
+    2300092: "\u0428\u0430\u0439\u0431\u0430005"
+    2300094: "\u0428\u0430\u0439\u0431\u0430006"
+    2300096: "\u0428\u0430\u0439\u0431\u0430007"
+    3300000: Box018
+    3300002: Box019
+    3300004: Box020
+    3300006: Box021
+    3300008: Box022
+    3300010: Box023
+    3300012: Box024
+    3300014: Box025
+    3300016: Box026
+    3300018: buttonVMA
+    3300020: buttonVMA0
+    3300022: buttonVMA1
+    3300024: buttonVMA2
+    3300026: buttonVMA3
+    3300028: buttonVMA4
+    3300030: buttonVMA5
+    3300032: buttonVMA6
+    3300034: buttonVMA7
+    3300036: buttonVMA8
+    3300038: Cylinder00
+    3300040: Cylinder21
+    3300042: Cylinder22
+    3300044: Cylinder28
+    3300046: Line004
+    3300048: Line005
+    3300050: Tube002
+    3300052: Tube003
+    3300054: Tube004
+    3300056: Tube005
+    3300058: Tube006
+    3300060: "\u041A\u043E\u0440\u043E\u0431\u043A\u0430"
+    3300062: "\u041F\u043B\u043E\u0449\u0430\u0434\u043A\u0430"
+    3300064: "\u041F\u043B\u043E\u0449\u0430\u0434\u043A\u0430 \u0441 \u0434\u044B\u0440\u043A\u0430\u043C\u0438"
+    3300066: "\u041F\u043E\u0434\u0441\u0442\u0430\u0432\u043A\u0430 \u043F\u043E\u0434
+      \u0442\u0440\u0443\u0431\u043A\u0443"
+    3300068: "\u041F\u043E\u0434\u0441\u0442\u0430\u0432\u043A\u0430 \u043F\u043E\u0434
+      \u0442\u0440\u0443\u0431\u043A\u04432"
+    3300070: "\u0421\u043A\u043E\u0442\u0447"
+    3300072: "\u0421\u043A\u043E\u0442\u04472"
+    3300074: "\u0421\u043A\u043E\u0442\u04473"
+    3300076: "\u0421\u043A\u043E\u0442\u04474"
+    3300078: "\u0421\u043A\u043E\u0442\u04475"
+    3300080: "\u0422\u0440\u0443\u0431\u043A\u0430"
+    3300082: "\u0428\u0430\u0439\u0431\u0430"
+    3300084: "\u0428\u0430\u0439\u0431\u0430001"
+    3300086: "\u0428\u0430\u0439\u0431\u0430002"
+    3300088: "\u0428\u0430\u0439\u0431\u0430003"
+    3300090: "\u0428\u0430\u0439\u0431\u0430004"
+    3300092: "\u0428\u0430\u0439\u0431\u0430005"
+    3300094: "\u0428\u0430\u0439\u0431\u0430006"
+    3300096: "\u0428\u0430\u0439\u0431\u0430007"
+    4300000: "\u041F\u043B\u043E\u0449\u0430\u0434\u043A\u0430"
+    4300002: "\u041A\u043E\u0440\u043E\u0431\u043A\u0430"
+    4300004: "\u0422\u0440\u0443\u0431\u043A\u0430"
+    4300006: "\u041F\u043E\u0434\u0441\u0442\u0430\u0432\u043A\u0430 \u043F\u043E\u0434
+      \u0442\u0440\u0443\u0431\u043A\u0443"
+    4300008: "\u0428\u0430\u0439\u0431\u0430"
+    4300010: "\u041F\u043B\u043E\u0449\u0430\u0434\u043A\u0430 \u0441 \u0434\u044B\u0440\u043A\u0430\u043C\u0438"
+    4300012: "\u0421\u043A\u043E\u0442\u0447"
+    4300014: "\u041F\u043E\u0434\u0441\u0442\u0430\u0432\u043A\u0430 \u043F\u043E\u0434
+      \u0442\u0440\u0443\u0431\u043A\u04432"
+    4300016: "\u0421\u043A\u043E\u0442\u04472"
+    4300018: "\u0421\u043A\u043E\u0442\u04473"
+    4300020: "\u0421\u043A\u043E\u0442\u04474"
+    4300022: "\u0421\u043A\u043E\u0442\u04475"
+    4300024: "\u0428\u0430\u0439\u0431\u0430001"
+    4300026: "\u0428\u0430\u0439\u0431\u0430002"
+    4300028: "\u0428\u0430\u0439\u0431\u0430003"
+    4300030: "\u0428\u0430\u0439\u0431\u0430004"
+    4300032: "\u0428\u0430\u0439\u0431\u0430005"
+    4300034: "\u0428\u0430\u0439\u0431\u0430006"
+    4300036: "\u0428\u0430\u0439\u0431\u0430007"
+    4300038: Tube006
+    4300040: Tube005
+    4300042: Tube004
+    4300044: Tube003
+    4300046: Tube002
+    4300048: Line005
+    4300050: Line004
+    4300052: Cylinder28
+    4300054: Cylinder22
+    4300056: Cylinder21
+    4300058: Cylinder00
+    4300060: buttonVMA8
+    4300062: buttonVMA7
+    4300064: buttonVMA6
+    4300066: buttonVMA5
+    4300068: buttonVMA4
+    4300070: buttonVMA3
+    4300072: buttonVMA2
+    4300074: buttonVMA1
+    4300076: buttonVMA0
+    4300078: buttonVMA
+    4300080: Box026
+    4300082: Box025
+    4300084: Box024
+    4300086: Box023
+    4300088: Box022
+    4300090: Box021
+    4300092: Box020
+    4300094: Box019
+    4300096: Box018
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Default
+    second: {fileID: 2100000, guid: 0db6a95122890204e91b7c2874274a8e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: cef3006e341c4854db3ea210665e253c, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

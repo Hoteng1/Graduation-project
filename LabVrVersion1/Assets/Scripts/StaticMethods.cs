@@ -6,8 +6,17 @@ using UnityEngine;
 
 namespace Assets.Scripts
 {
+    public enum Exp
+    {
+        Nothing,
+        Termo,
+        Paro,
+        Other
+    }
     static public class StaticMethods
     {
+
+        public static Exp currentExp;
         static public void SwitchCursor()
         {
             if (Cursor.lockState == CursorLockMode.Locked)
