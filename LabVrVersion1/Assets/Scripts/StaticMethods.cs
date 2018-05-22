@@ -15,7 +15,7 @@ namespace Assets.Scripts
     }
     static public class StaticMethods
     {
-
+        public static int Id_user;
         public static Exp currentExp;
         static public void SwitchCursor()
         {

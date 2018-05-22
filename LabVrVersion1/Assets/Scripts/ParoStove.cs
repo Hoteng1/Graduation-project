@@ -108,17 +108,7 @@ public class ParoStove : MonoBehaviour
                 lopasty.transform.Rotate(new Vector3(0, 90, 0), speed - T, Space.Self);
             }
 
-            if (Input.GetKeyDown(KeyCode.K))
-            {
-                if (vkl == true)
-                {
-                    float s;
-                    s = 377 / Random.Range(378f, 380f); //подсчет КПД компрессора
-                    kpd = (float)System.Math.Round(s, 3);
-                    kpd_s = "КПД компросора = " + kpd.ToString();
-                }
-
-            }
+            
 
             if (Input.GetKeyDown(KeyCode.O))
             {
