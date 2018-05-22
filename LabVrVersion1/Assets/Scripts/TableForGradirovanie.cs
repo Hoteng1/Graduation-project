@@ -15,7 +15,7 @@ namespace Assets.Scripts
 
         public override string ToString()
         {
-            return "Metal :" + Name + " T1: " + T1 + " T2: " + T2 + " EZ: " + EZ + " Alpha: " + Alpha;
+            return "Метал : Сu - Ni" + Name + " T1: " + T1 + " T2: " + T2 + " ЭДС мВ: " + EZ + " Альфа: " + Alpha;
         }
     }
 }

@@ -16,7 +16,7 @@ public class ModelGradirTermo : MonoBehaviour
     {
        
         Stove = GameObject.Find("Stove");
-        VMetr = GameObject.Find("Vmetr");
+        VMetr = GameObject.Find("VmetrM");
         stoveLogical = StoveLogical.getInstance();
         stoveLogical.Init(Stove, VMetr);
         Display = GameObject.Find("DisplayData").GetComponent<TextMesh>();
@@ -40,6 +40,7 @@ public class ModelGradirTermo : MonoBehaviour
 
                 stoveLogical.CloseDoor();
             }
+
             stoveLogical.RotateArrow();
             stoveLogical.ShowDisplay(Display);
             Text.text = stoveLogical.GetInformation();

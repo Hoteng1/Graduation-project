@@ -26,7 +26,6 @@ public class DragDropScript : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             getTarget = ReturnClickedObject();
-            stoveLogical.SetTartget(getTarget);
             if (getTarget != null && isReferenceTrue(getTarget))
             {
                 isMouseDragging = true;
@@ -41,10 +40,7 @@ public class DragDropScript : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             isMouseDragging = false;
-            if (stoveLogical.isIncludeObject(getTarget))
-            {
-               
-            }
+           
         }
 
         //Is mouse Moving
