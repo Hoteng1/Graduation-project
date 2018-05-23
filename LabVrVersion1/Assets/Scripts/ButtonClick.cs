@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class ButtonClick : MonoBehaviour {
 
+    public string Title;
     private StoveLogical stoveLogical;
 	// Use this for initialization
 	void Start () {
@@ -18,6 +19,12 @@ public class ButtonClick : MonoBehaviour {
 
     private void OnMouseDown()
     {
-        stoveLogical.BeginExpereince();
+        switch(Title)
+        {
+            case "Termo":  { stoveLogical.BeginExpereince(); }break;
+            case "THD": { StaticMethods.isTHD = !StaticMethods.isTHD; }break;
+            default: { }break;
+        }
+        
     }
 }

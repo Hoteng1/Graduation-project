@@ -53,7 +53,7 @@ public class DragDropScript : MonoBehaviour
             Vector3 currentPosition = Camera.allCameras[0].ScreenToWorldPoint(currentScreenSpace) + offsetValue;
 
             //It will update target gameobject's current postion.
-            getTarget.transform.position =Vector3.MoveTowards(getTarget.transform.position, currentPosition, 0.7f);
+            getTarget.transform.position =Vector3.MoveTowards(getTarget.transform.position, currentPosition, 1f);
             //getTarget.transform.position = currentPosition;
         }
 
@@ -77,17 +77,15 @@ public class DragDropScript : MonoBehaviour
     bool isReferenceTrue(GameObject gameObject)
     {
        
-            
-
-        string[] LockObjects = { "FirstObject", "Terrain","ButtonStove", "StoveBox" , "wall", "walltwo","wallTree", "wallFour" , "Floor"};
+        string[] LockObjects = { "Insruction", "Insruction two", "Insruction Tree", "PanelFoWaeter", "PanelFoPar", "PanelFoGT" };
         for (int i = 0; i < LockObjects.Length; i++)
         {
             if (gameObject.Equals(GameObject.Find(LockObjects[i])))
             {
-                return false;
+                return true;
             }
         }
 
-        return true;
+        return false;
     }
 }

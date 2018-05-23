@@ -62,7 +62,7 @@ namespace Assets.Scripts
             Arrow.transform.Rotate(0, 0, AngleArrow);
             Arrow.transform.Rotate(0, 0, ChangeAngle);
             AngleArrow = -ChangeAngle;
-            Debug.Log(Arrow.rotation.z);
+           
           
 
         }
